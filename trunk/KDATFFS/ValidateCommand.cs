@@ -33,27 +33,27 @@ namespace KDATFFS
                 switch (ts.ValidateCommand)
                 {
                     case ValidateCommandTypes.ValidateBrowserTitle:
-                        ts.IsPass = ValidateStringValue(ts.ExceptedValue, ExecuteValidateBrowserTitle(ts), Resources.ValidationExceptionRegex
+                        ts.IsPass = ValidateStringValue(ts.ExpectedValue, ExecuteValidateBrowserTitle(ts), Resources.ValidationExceptionRegex
                               , Resources.ValidationExceptionStringEquals);
                         Thread.Sleep(stepSpacingTime);
                         break;
                     case ValidateCommandTypes.ValidateBrowserUrl:
-                        ts.IsPass = ValidateStringValue(ts.ExceptedValue, ExecuteValidateBrowserUrl(ts), Resources.ValidationExceptionRegex
+                        ts.IsPass = ValidateStringValue(ts.ExpectedValue, ExecuteValidateBrowserUrl(ts), Resources.ValidationExceptionRegex
                               , Resources.ValidationExceptionStringEquals);
                         Thread.Sleep(stepSpacingTime);
                         break;
                     case ValidateCommandTypes.ValidateItemText:
-                        ts.IsPass = ValidateStringValue(ts.ExceptedValue, ExecuteValidateItemText(ts), Resources.ValidationExceptionRegex
+                        ts.IsPass = ValidateStringValue(ts.ExpectedValue, ExecuteValidateItemText(ts), Resources.ValidationExceptionRegex
                               , Resources.ValidationExceptionStringEquals);
                         Thread.Sleep(stepSpacingTime);
                         break;
                     case ValidateCommandTypes.ValidateItemValue:
-                        ts.IsPass = ValidateStringValue(ts.ExceptedValue, ExecuteValidateItemValue(ts), Resources.ValidationExceptionRegex
+                        ts.IsPass = ValidateStringValue(ts.ExpectedValue, ExecuteValidateItemValue(ts), Resources.ValidationExceptionRegex
                               , Resources.ValidationExceptionStringEquals);
                         Thread.Sleep(stepSpacingTime);
                         break;
                     case ValidateCommandTypes.ValidateAlertText:
-                        ts.IsPass = ValidateStringValue(ts.ExceptedValue, ExecuteValidateAlertText(ts), Resources.ValidationExceptionRegex
+                        ts.IsPass = ValidateStringValue(ts.ExpectedValue, ExecuteValidateAlertText(ts), Resources.ValidationExceptionRegex
                               , Resources.ValidationExceptionStringEquals);
                         Thread.Sleep(stepSpacingTime);
                         break;
@@ -165,13 +165,13 @@ namespace KDATFFS
         public bool ExcuteValidateContainText(TestStep ts)
         {
             string pageSource = ts.WebDriver.PageSource;
-            if (pageSource.Contains(UtilityClass.GetTestDate(ts.ExceptedValue)) == true)
+            if (pageSource.Contains(UtilityClass.GetTestDate(ts.ExpectedValue)) == true)
             {
                 return true;
             }
             else
             {
-                throw new ValidateCommandException(string.Format(CultureInfo.InvariantCulture, Resources.ValidateContainTextException, UtilityClass.GetTestDate(ts.ExceptedValue) ));
+                throw new ValidateCommandException(string.Format(CultureInfo.InvariantCulture, Resources.ValidateContainTextException, UtilityClass.GetTestDate(ts.ExpectedValue) ));
             }
         }
 

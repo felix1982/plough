@@ -103,7 +103,7 @@ namespace KDATFFS.Provider
                     ts.CommandArgs=strs[4];
                     ts.FindMethodType = DataProviderHelper.ConvertToFindMethodTypes(strs[5]);
                     ts.FindArgs = strs[6];
-                    ts.ExceptedValue = strs[7];
+                    ts.ExpectedValue = strs[7];
                     ts.FrameName = strs[8];
                     ts.WindowName = strs[9];
                     ts.Comment = strs[10];
@@ -134,7 +134,7 @@ namespace KDATFFS.Provider
                     ts.CommandArgs = strs[4];
                     ts.FindMethodType = DataProviderHelper.ConvertToFindMethodTypes(strs[5]);
                     ts.FindArgs = strs[6];
-                    ts.ExceptedValue = strs[7];
+                    ts.ExpectedValue = strs[7];
                     ts.FrameName = strs[8];
                     ts.WindowName = strs[9];
                     ts.Comment = strs[10];

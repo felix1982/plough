@@ -230,7 +230,7 @@ namespace KDATFFS.Provider
             dt.Columns.Add("CommandArgs", Type.GetType("System.String"));
             dt.Columns.Add("FindMethodType", Type.GetType("System.String"));
             dt.Columns.Add("FindArgs", Type.GetType("System.String"));
-            dt.Columns.Add("ExceptedValue", Type.GetType("System.String"));
+            dt.Columns.Add("ExpectedValue", Type.GetType("System.String"));
             dt.Columns.Add("Frame", Type.GetType("System.String"));
             dt.Columns.Add("window", Type.GetType("System.String"));
             dt.Columns.Add("comment", Type.GetType("System.String"));

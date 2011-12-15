@@ -26,19 +26,19 @@ namespace KDATFFS
         private string framename;
         private string windowname;
         private string comment;
-        private string exceptedvalue;
+        private string expectedvalue;
         private string commandargscolumnname;
-        private string exceptedcolumnname;
+        private string Expectedcolumnname;
 
 
 
         /// <summary>
-        /// excepted value
+        /// Expected value
         /// </summary>
-        public string ExceptedValue
+        public string ExpectedValue
         {
-            get { return this.exceptedvalue; }
-            set { this.exceptedvalue = value; }
+            get { return this.expectedvalue; }
+            set { this.expectedvalue = value; }
         }
 
         /// <summary>
@@ -58,10 +58,10 @@ namespace KDATFFS
         }
 
 
-        public string ExceptedColumnName
+        public string ExpectedColumnName
         {
-            get { return this.exceptedcolumnname; }
-            set { this.exceptedcolumnname = value; }
+            get { return this.Expectedcolumnname; }
+            set { this.Expectedcolumnname = value; }
         }
 
        /// <summary>

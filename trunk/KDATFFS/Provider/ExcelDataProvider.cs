@@ -136,7 +136,7 @@ namespace KDATFFS.Provider
                             ts.CommandArgs = datatable.Rows[i]["CommandArgs"].ToString();
                             ts.FindMethodType = DataProviderHelper.ConvertToFindMethodTypes(datatable.Rows[i]["FindMethodType"].ToString());
                             ts.FindArgs = datatable.Rows[i]["FindArgs"].ToString();
-                            ts.ExceptedValue = datatable.Rows[i]["ExceptedValue"].ToString();
+                            ts.ExpectedValue = datatable.Rows[i]["ExpectedValue"].ToString();
                             ts.FrameName = datatable.Rows[i]["Frame"].ToString();
                             ts.WindowName = datatable.Rows[i]["window"].ToString();
                             ts.Comment = datatable.Rows[i]["comment"].ToString();
@@ -176,7 +176,7 @@ namespace KDATFFS.Provider
                             ts.CommandArgs = datatable.Rows[i]["CommandArgs"].ToString();
                             ts.FindMethodType = DataProviderHelper.ConvertToFindMethodTypes(datatable.Rows[i]["FindMethodType"].ToString());
                             ts.FindArgs = datatable.Rows[i]["FindArgs"].ToString();
-                            ts.ExceptedValue = datatable.Rows[i]["ExceptedValue"].ToString();
+                            ts.ExpectedValue = datatable.Rows[i]["ExpectedValue"].ToString();
                             ts.FrameName = datatable.Rows[i]["Frame"].ToString();
                             ts.WindowName = datatable.Rows[i]["window"].ToString();
                             ts.Comment = datatable.Rows[i]["comment"].ToString();

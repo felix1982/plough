@@ -247,7 +247,7 @@ namespace KDATFFS
                                    {
                                        teststeps[key].WebDriver = teststeps[key].WebDriver.SwitchTo().Window(h);
                                        hasPopupWindow = true;
-                                   }//if excepted windows appear, close them
+                                   }//if Expected windows appear, close them
                                    else if(h!= currethandler&&teststeps[key].WebDriver.SwitchTo().Window(h).Title != teststeps[key].WindowName)
                                    {
                                        teststeps[key].WebDriver.SwitchTo().Window(h).Close();

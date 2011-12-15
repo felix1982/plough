@@ -29,7 +29,7 @@ namespace KDATFFSRecorder.Core
             dt.Columns.Add("CommandArgs", Type.GetType("System.String"));
             dt.Columns.Add("FindMethodType", Type.GetType("System.String"));
             dt.Columns.Add("FindArgs", Type.GetType("System.String"));
-            dt.Columns.Add("ExceptedValue", Type.GetType("System.String"));
+            dt.Columns.Add("ExpectedValue", Type.GetType("System.String"));
             dt.Columns.Add("Frame", Type.GetType("System.String"));
             dt.Columns.Add("Window", Type.GetType("System.String"));
             dt.Columns.Add("Comment", Type.GetType("System.String"));
@@ -72,7 +72,7 @@ namespace KDATFFSRecorder.Core
                 newRow["FindMethodType"] = "";
             }
             newRow["FindArgs"] = ts.FindArgs;
-            newRow["ExceptedValue"] = ts.ExceptedValue;
+            newRow["ExpectedValue"] = ts.ExpectedValue;
             newRow["Frame"] = ts.FrameName;
             newRow["Window"] = ts.WindowName;
             newRow["Comment"] = ts.Comment;

@@ -612,7 +612,7 @@ namespace KDATFFSRecorder
             testStep.CommandArgs = "";
             testStep.FrameName = currentFrameName;
             testStep.WindowName = currentPopWindowText;
-            testStep.ExceptedValue = expectedValue;
+            testStep.ExpectedValue = expectedValue;
             if (validateCommandType == ValidateCommandTypes.ValidateItemText || validateCommandType == ValidateCommandTypes.ValidateItemValue)
             {
                 if (element.getAttribute("id", 0) != null && element.getAttribute("id", 0).ToString() != "")

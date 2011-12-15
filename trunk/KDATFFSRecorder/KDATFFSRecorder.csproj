@@ -49,17 +49,21 @@
     </DocumentationFile>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Castle.Core, Version=2.5.1.0, Culture=neutral, PublicKeyToken=407dd0808d44fbdc, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Depends\Castle.Core.dll</HintPath>
+    </Reference>
     <Reference Include="csExWB, Version=2.0.0.1, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\WatiNRecorder\trunk\Depends\csExWB.dll</HintPath>
+      <HintPath>..\Depends\csExWB.dll</HintPath>
     </Reference>
     <Reference Include="FileDlgExtenders, Version=1.1.0.0, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\WatiNRecorder\trunk\Depends\FileDlgExtenders.dll</HintPath>
+      <HintPath>..\Depends\FileDlgExtenders.dll</HintPath>
     </Reference>
     <Reference Include="Interop.CSEXWBDLMANLib, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\WatiNRecorder\trunk\Depends\Interop.CSEXWBDLMANLib.dll</HintPath>
+      <HintPath>..\Depends\Interop.CSEXWBDLMANLib.dll</HintPath>
     </Reference>
     <Reference Include="Interop.SHDocVw, Version=1.1.0.0, Culture=neutral, PublicKeyToken=db7cfd3acb5ad44e, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
@@ -71,7 +75,7 @@
     </Reference>
     <Reference Include="Microsoft.Win32.Hooks, Version=1.0.2908.36134, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\WatiNRecorder\trunk\Depends\Microsoft.Win32.Hooks.dll</HintPath>
+      <HintPath>..\Depends\Microsoft.Win32.Hooks.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core">

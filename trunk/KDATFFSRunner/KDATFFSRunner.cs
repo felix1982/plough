@@ -462,10 +462,10 @@ namespace KDATFFSRunner
                             test.TestSteps[key].CommandArgsColumnName = columnname;
                         }
 
-                        if (GetDataFromDriver(test.TestSteps[key].ExceptedValue) != null && GetDataFromDriver(test.TestSteps[key].ExceptedValue) != "")
+                        if (GetDataFromDriver(test.TestSteps[key].ExpectedValue) != null && GetDataFromDriver(test.TestSteps[key].ExpectedValue) != "")
                         {
-                            string ecolumnname = (GetDataFromDriver(test.TestSteps[key].ExceptedValue).Split(':'))[1];
-                            test.TestSteps[key].ExceptedColumnName = ecolumnname;
+                            string ecolumnname = (GetDataFromDriver(test.TestSteps[key].ExpectedValue).Split(':'))[1];
+                            test.TestSteps[key].ExpectedColumnName = ecolumnname;
                         }
 
 
@@ -492,10 +492,10 @@ namespace KDATFFSRunner
                                     newtest.TestTable.Rows[i]["CommandArgs"] = newtest.TestSteps[key].CommandArgs;
                                 }
 
-                                if (newtest.TestSteps[key].ExceptedColumnName != null)
+                                if (newtest.TestSteps[key].ExpectedColumnName != null)
                                 {
-                                    newtest.TestSteps[key].ExceptedValue = dr[newtest.TestSteps[key].ExceptedColumnName].ToString();
-                                    newtest.TestTable.Rows[i]["ExceptedValue"] = newtest.TestSteps[key].ExceptedValue;
+                                    newtest.TestSteps[key].ExpectedValue = dr[newtest.TestSteps[key].ExpectedColumnName].ToString();
+                                    newtest.TestTable.Rows[i]["ExpectedValue"] = newtest.TestSteps[key].ExpectedValue;
                                 }
                                 newtest.TestSteps[key].TestStepId = stepid.ToString();
                                 newtest.TestTable.Rows[i]["TestStep"] = stepid.ToString();
