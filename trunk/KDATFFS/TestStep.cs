@@ -28,7 +28,10 @@ namespace KDATFFS
         private string comment;
         private string expectedvalue;
         private string commandargscolumnname;
-        private string Expectedcolumnname;
+        private string expectedcolumnname;
+        private string findargcolumnname;
+        private string windowcolumnname;
+        private string framecolumnname;
 
 
 
@@ -60,8 +63,26 @@ namespace KDATFFS
 
         public string ExpectedColumnName
         {
-            get { return this.Expectedcolumnname; }
-            set { this.Expectedcolumnname = value; }
+            get { return this.expectedcolumnname; }
+            set { this.expectedcolumnname = value; }
+        }
+
+        public string FindArgsColumnName
+        {
+            get { return this.findargcolumnname; }
+            set { this.findargcolumnname = value; }
+        }
+
+        public string WindowColumnName
+        {
+            get { return this.windowcolumnname; }
+            set { this.windowcolumnname = value; }
+        }
+
+        public string FrameColumnName
+        {
+            get { return this.framecolumnname; }
+            set { this.framecolumnname = value; }
         }
 
        /// <summary>

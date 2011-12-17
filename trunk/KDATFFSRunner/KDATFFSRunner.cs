@@ -468,6 +468,25 @@ namespace KDATFFSRunner
                             test.TestSteps[key].ExpectedColumnName = ecolumnname;
                         }
 
+                        if (GetDataFromDriver(test.TestSteps[key].FindArgs) != null && GetDataFromDriver(test.TestSteps[key].FindArgs) != "")
+                        {
+                            string fcolumnname = (GetDataFromDriver(test.TestSteps[key].FindArgs).Split(':'))[1];
+                            test.TestSteps[key].FindArgsColumnName = fcolumnname;
+                        }
+
+
+                        if (GetDataFromDriver(test.TestSteps[key].WindowName) != null && GetDataFromDriver(test.TestSteps[key].WindowName) != "")
+                        {
+                            string wcolumnname = (GetDataFromDriver(test.TestSteps[key].WindowName).Split(':'))[1];
+                            test.TestSteps[key].WindowColumnName = wcolumnname;
+                        }
+
+                        if (GetDataFromDriver(test.TestSteps[key].FrameName) != null && GetDataFromDriver(test.TestSteps[key].FrameName) != "")
+                        {
+                            string fcolumnname = (GetDataFromDriver(test.TestSteps[key].FrameName).Split(':'))[1];
+                            test.TestSteps[key].FrameColumnName = fcolumnname;
+                        }
+
 
                     }
 
@@ -497,6 +516,25 @@ namespace KDATFFSRunner
                                     newtest.TestSteps[key].ExpectedValue = dr[newtest.TestSteps[key].ExpectedColumnName].ToString();
                                     newtest.TestTable.Rows[i]["ExpectedValue"] = newtest.TestSteps[key].ExpectedValue;
                                 }
+
+                                if (newtest.TestSteps[key].FindArgsColumnName != null)
+                                {
+                                    newtest.TestSteps[key].FindArgs = dr[newtest.TestSteps[key].FindArgsColumnName].ToString();
+                                    newtest.TestTable.Rows[i]["FindArgs"] = newtest.TestSteps[key].FindArgs;
+                                }
+
+                                if (newtest.TestSteps[key].WindowColumnName != null)
+                                {
+                                    newtest.TestSteps[key].WindowName = dr[newtest.TestSteps[key].WindowColumnName].ToString();
+                                    newtest.TestTable.Rows[i]["window"] = newtest.TestSteps[key].WindowName;
+                                }
+
+                                if (newtest.TestSteps[key].FrameColumnName != null)
+                                {
+                                    newtest.TestSteps[key].FrameName = dr[newtest.TestSteps[key].FrameColumnName].ToString();
+                                    newtest.TestTable.Rows[i]["Frame"] = newtest.TestSteps[key].FrameName;
+                                }
+
                                 newtest.TestSteps[key].TestStepId = stepid.ToString();
                                 newtest.TestTable.Rows[i]["TestStep"] = stepid.ToString();
                                 i++;

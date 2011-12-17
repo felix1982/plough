@@ -186,7 +186,7 @@ namespace KDATFFSRecorder
         /// <param name="e"></param>
         private void excelOutput_Click(object sender, EventArgs e)
         {
-            saveToFile.Filter = "Excel2003|*.xls|Excel2007|*xlsx";
+            saveToFile.Filter = "Excel2003|*.xls|Excel2007|*.xlsx";
             if (tstbSheetName.Text == "")
             {
                 MessageBox.Show("please input Sheet Name");
