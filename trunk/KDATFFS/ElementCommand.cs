@@ -8,6 +8,7 @@ using OpenQA.Selenium.Chrome;
 using OpenQA.Selenium.Support.UI;
 using KDATFFS.Properties;
 using System.Threading;
+using System.Windows.Forms;
 
 namespace KDATFFS
 {
@@ -61,11 +62,18 @@ namespace KDATFFS
                         teststep.IsPass = true;
                         Thread.Sleep(stepSpacingTime);
                         break;
+                    case ElementCommandTypes.GetText:
+                        ExecuteGetText(teststep);
+                        teststep.IsPass = true;
+                        Thread.Sleep(stepSpacingTime);
+                        break;
+
                 }
                 return true;
             }
             catch (Exception unexecutecommand)
             {
+                MessageBox.Show(unexecutecommand.Message);
                throw new ElementCommandException(string.Format(Resources.CommandExecutionExceptionMessage, teststep.TestId, teststep.TestStepId, teststep.ElementCommand.ToString()), unexecutecommand, this);
             }
         }
@@ -115,6 +123,11 @@ namespace KDATFFS
         {
             SelectElement select = new SelectElement(teststep.WebElement);
             select.SelectByText(teststep.CommandArgs);
+        }
+
+        public void ExecuteGetText(TestStep teststep)
+        {
+            UtilityClass.InsertData(teststep.CommandArgs, teststep.WebElement.Text);
         }
      
     }

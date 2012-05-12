@@ -33,6 +33,17 @@ namespace KDATFFS
  
         }
 
+        public static void InsertData(string name,string value)
+        {
+            if (returnData.ContainsKey(name))
+            {
+                returnData.Remove(name);
+            }
+            returnData.Add(name, value);
+
+ 
+        }
+
 
         public static string GetTestDate(string commandArgs)
         {

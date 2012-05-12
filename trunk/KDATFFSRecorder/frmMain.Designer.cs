@@ -100,6 +100,7 @@
             this.fswFavorities = new System.IO.FileSystemWatcher();
             this.saveToFile = new System.Windows.Forms.SaveFileDialog();
             this.InputFromFile = new System.Windows.Forms.OpenFileDialog();
+            this.getTextToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.toolStrip1.SuspendLayout();
             this.statusStrip1.SuspendLayout();
@@ -657,7 +658,7 @@
             this.ttsmAddTestStep,
             this.ttsmAddValitation});
             this.contextMenuElement.Name = "contextMenuStrip1";
-            this.contextMenuElement.Size = new System.Drawing.Size(155, 70);
+            this.contextMenuElement.Size = new System.Drawing.Size(155, 92);
             // 
             // ttsmAddBrowserStep
             // 
@@ -744,7 +745,8 @@
             this.ClearToolStripMenuItem,
             this.ClickToolStripMenuItem,
             this.SendKeysToolStripMenuItem,
-            this.selectToolStripMenuItem});
+            this.selectToolStripMenuItem,
+            this.getTextToolStripMenuItem});
             this.ttsmAddTestStep.Name = "ttsmAddTestStep";
             this.ttsmAddTestStep.Size = new System.Drawing.Size(154, 22);
             this.ttsmAddTestStep.Text = "AddElementStep";
@@ -854,6 +856,13 @@
             // InputFromFile
             // 
             this.InputFromFile.FileName = "openFileDialog1";
+            // 
+            // getTextToolStripMenuItem
+            // 
+            this.getTextToolStripMenuItem.Name = "getTextToolStripMenuItem";
+            this.getTextToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.getTextToolStripMenuItem.Text = "GetText";
+            this.getTextToolStripMenuItem.Click += new System.EventHandler(this.AddElementTestStep_Click);
             // 
             // frmMain
             // 
@@ -981,6 +990,7 @@
         private System.Windows.Forms.ToolStripMenuItem validateImageToolStripMenuItem;
         private System.Windows.Forms.OpenFileDialog InputFromFile;
         private System.Windows.Forms.ToolStripMenuItem validateContainTextToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem getTextToolStripMenuItem;
     }
 }
 

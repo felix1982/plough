@@ -35,6 +35,12 @@ namespace KDATFFS
             /// </summary>
             Select,
 
+
+            GetAttribute,
+
+
+            GetText,
+
         }
     
 }

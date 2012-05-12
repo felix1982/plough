@@ -1333,6 +1333,9 @@ namespace KDATFFSRecorder
                 case "SendKeys":
                     AddElementTestStep(activeElement, ElementCommandTypes.SendKeys, inputArgs, currentPopWindowText);
                     break;
+                case "GetText":
+                    AddElementTestStep(activeElement, ElementCommandTypes.GetText, inputArgs, currentPopWindowText);
+                    break;
                 case "ValidateAlertText":
                     AddValidateTestStep(activeElement, ValidateCommandTypes.ValidateAlertText, inputArgs);
                     break;
@@ -1420,6 +1423,9 @@ namespace KDATFFSRecorder
                     fit.Show();
                     break;
                 case "SendKeys":
+                    fit.Show();
+                    break;
+                case "GetText":
                     fit.Show();
                     break;
                 case "ValidateAlertText":

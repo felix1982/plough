@@ -124,6 +124,12 @@ namespace KDATFFS.Provider
                 case "Select":
                     ect = ElementCommandTypes.Select;
                     break;
+                case "GetAttribute":
+                    ect = ElementCommandTypes.GetAttribute;
+                    break;
+                case "GetText":
+                    ect = ElementCommandTypes.GetText;
+                    break;
                 default:
                     throw new ParseException(string.Format(Resources.ParseElementCommandException, str));
             }
