@@ -1,4 +1,5 @@
 # Project Description 
+这是一个很久以前写的测试框架了,已经很久没有更新了,很能很多东西已经不适用了.不过codeplex快要下线了，所以从codeplex迁移而来。
 
 This is a key-word driver framework for selenium2. contains KDATFFS,KDATFFSRunner and KDATFFSRecorder. KDATFFSRunner allows user to ctreate automated tests using excel,Csv; KDATFFSRecorder allow user to record operation into excel,Csv.
 
